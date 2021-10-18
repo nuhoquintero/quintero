@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script&gt;
+        <script>
+            $(document).ready(
+                function(){
+                    $.ajax({
+                        url: "https://api.darksky.net/forecast/b4497c8a6b18bf75776b7fd997f2b90a/-34.6103138,-58.4076534?lang=es&units=ca&quot",
+                        dataType:"json", 
+                        success: function(clima) {
+                            //s = "<img src='imagenes/" + clima['daily']['icon']+".png" + "'>";
+
+                            var s = "";
+                            var dias = clima['daily']['data'].length;
+
+                            for(x = 0; x < dias; x++) {
+                                s += "<img src='imagenes/" + clima['daily']['data'][x]['icon'] + ".png'>";
+                                s += "<img src='imagenes/" + clima['daily']['data'][x]['icon'] + ".png'>";
+                                s += "<img src='imagenes/" + clima['daily']['data'][x]['icon'] + ".png'>";
+                            }
+                            
+
+
+                            $("#contenedor").html(s);
+                            
+                        }
+                    });
+                }
+            );
+            
+        </script>
+    </head>
+    <body>
+
+        <div id="contenedor">
+            img scr="http://www.gstatic.com/images/icons/material/apps/weather/2x/mostly_cloudy_day_light_color_96dp.png"
+            
+            
+            
+        <div jscontroller= "e05h5" class="Ab33Nc" aria-level="3" role="heading"></div>
+        </div>
+        <div class= "wtsRwe" ></div>
+        <div>
+            <span id="wob_pp"></span>
+        </div>
+        <div>
+            <span id= "wob_hm"></span>
+            ","
+        </div>
+        <div>
+            <span>
+                <span class="wob_t" id="wob_ws">23 km/h</span>
+                <span class="wob_t" style="display:none" id="wob_tws">14 mrhp</span>
+            </span>
+            <div>
+                <div class="wob_dfc" id="wob_dp" data-ved="2ahUKEwip8vW_trPzAhUspJUCHVU6AO0Qimt6BAgDEAk" style="left: 0px; top: 0px; transform: translate3d(0px, 0px, 0px); transition: -webkit-transform 0ms ease-in-out 0s;">
+                    <div class="wob_df wob_ds" data-wob-di="0" role="button" tabindex="0" data-ved="2ahUKEwip8vW_trPzAhUspJUCHVU6AO0Qi2soAHoECAMQCg">
+                        <div class="Z1VzSb" aria-label="martes">mar</div>
+                        <div class="DxhUm">
+                            <img class="uW5pk" alt="Soleado" src="//http://www.gstatic.com/images/icons/material/apps/weather/2x/mostly_sunny_light_color_96dp.png" data-atf="1" data-frt="0"></div>
+                    <div class="wNE31c">
+                    <div class="gNCp2e">6
+                        <span class="wob_t" style="display:inline">23</span>
+                        <span class="wob_t" style="display:none">74</span>
+                    </div>
+                    <div class="QrNVmd ZXCv8e">
+                        <span class="wob_t" style="display:inline">10</span>
+                        <span class="wob_t" style="display:none">50</span>°.
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+    </body>
+</html>
